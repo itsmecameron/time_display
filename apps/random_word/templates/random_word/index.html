@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random word</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'display_time/css/style.css' %}">  
+</head>
+<body>
+    <div class="container text-center bg-info">
+            <div class="col-md-auto mt-2 p-2">
+                <p class="text-center"> Random Word (attempt # {{ request.session.count }})</p>
+        </div>
+            <div class="row justify-content-md-center border border-dark h3">
+                <p>{{ random }}</p>
+            </div>
+            <a href="/random_word" class=" btn btn-success">Generate</a>
+            <a href="/random_word/clear" class=" btn btn-danger">clear</a>
+    </div>
+</body>
+</html>

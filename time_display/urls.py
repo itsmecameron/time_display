@@ -16,4 +16,5 @@ Including another URLconf
 from django.conf.urls import url, include
 urlpatterns = [
     url(r'^', include('apps.display_time.urls')),
+    url(r'^random_word/', include('apps.random_word.urls')),
 ]
