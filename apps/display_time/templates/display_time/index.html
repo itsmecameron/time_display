@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'display_time/css/style.css' %}">  
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto mt-2 border p-2 h3">
+                <p>The current time and date:</p>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class=" col-8 mt-2 border p-4 h1 text-primary">
+                <p class="text-center text-success">{{ datetime }}</p>
+                <p class="text-center">{{ month }} {{ day }}, {{ year }} </p>
+                <p class="text-center">{{ time }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
